@@ -413,7 +413,7 @@ def graph_definition():
         
         identifier = Word(alphanums + "_." ).setName("identifier")
         
-        double_quoted_string = QuotedString('"', multiline=True, unquoteResults=False) # dblQuotedString
+        double_quoted_string = QuotedString('"', multiline=True, escChar='\\', unquoteResults=False) # dblQuotedString
 
         alphastring_ = OneOrMore(CharsNotIn(_noncomma + ' '))
 
